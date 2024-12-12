@@ -12,7 +12,7 @@ public class StatsServiceTest {
 
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedSumOfAllSales = 180;
-        int actualeSumOfAllSales = service.sumOfAllSales(sales);
+        int actualeSumOfAllSales = (int) service.sumOfAllSales(sales);
 
         Assertions.assertEquals(expectedSumOfAllSales, actualeSumOfAllSales);
     }
@@ -25,7 +25,7 @@ public class StatsServiceTest {
 
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedAverageSalesAmount = 15;
-        int actualeAverageSalesAmount = service.averageSalesAmount(sales);
+        int actualeAverageSalesAmount = (int) service.averageSalesAmount(sales);
 
         Assertions.assertEquals(expectedAverageSalesAmount, actualeAverageSalesAmount);
     }
