@@ -52,7 +52,7 @@ public class StatsService {
 
     // количество месяцев, в которых продажи были ниже среднего
     public int salesAreBelowAverage(int[] sales) {
-        int averageSalesAmount = (int) averageSalesAmount(sales);
+        long averageSalesAmount = averageSalesAmount(sales);
         int belowAverage = 0;
 
         for (int sale : sales) {
@@ -65,7 +65,7 @@ public class StatsService {
 
     // количество месяцев, в которых продажи были выше среднего
     public int salesAreAboveAverage(int[] sales) {
-        int averageSalesAmount = (int) averageSalesAmount(sales);
+        long averageSalesAmount = averageSalesAmount(sales);
         int aboveAverage = 0;
 
         for (int sale : sales) {
@@ -76,6 +76,3 @@ public class StatsService {
         return aboveAverage;
     }
 }
-
-
-
