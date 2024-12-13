@@ -10,9 +10,9 @@ public class StatsServiceTest {
     public void sumOfAllSales() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expectedSumOfAllSales = 180;
-        int actualeSumOfAllSales = (int) service.sumOfAllSales(sales);
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long expectedSumOfAllSales = 180;
+        long actualeSumOfAllSales = service.sumOfAllSales(sales);
 
         Assertions.assertEquals(expectedSumOfAllSales, actualeSumOfAllSales);
     }
@@ -23,9 +23,9 @@ public class StatsServiceTest {
     public void averageSalesAmount() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expectedAverageSalesAmount = 15;
-        int actualeAverageSalesAmount = (int) service.averageSalesAmount(sales);
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long expectedAverageSalesAmount = 15;
+        long actualeAverageSalesAmount = service.averageSalesAmount(sales);
 
         Assertions.assertEquals(expectedAverageSalesAmount, actualeAverageSalesAmount);
     }
@@ -64,7 +64,7 @@ public class StatsServiceTest {
     public void salesAreBelowAverage() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedBelowAverage = 5;
         int actualeBelowAverage = service.salesAreBelowAverage(sales);
@@ -79,7 +79,7 @@ public class StatsServiceTest {
     public void salesAreAboveAverage() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedAboveAverage = 5;
         int actualeAboveAverage = service.salesAreBelowAverage(sales);
